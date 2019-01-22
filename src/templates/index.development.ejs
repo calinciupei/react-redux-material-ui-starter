@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <link href="<%= htmlWebpackPlugin.options.environment %>/main.css" />
+  </head>
+  <body>
+    <noscript>
+      Enable your javascript to have the best experience.
+    </noscript>
+    <div id="dom-r-root"/>
+    <script src="<%= htmlWebpackPlugin.options.environment %>/main.bundle.js" type="text/javascript"></script>
+  </body>
+</html>
