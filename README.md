@@ -1,8 +1,8 @@
 # React Redux Simple Starter
 
-[![Build Status](https://travis-ci.org/calinciupei/react-redux-simple-starter.svg?branch=master)](https://travis-ci.org/calinciupei/react-redux-simple-starter)
-[![dependencies](https://david-dm.org/calinciupei/react-redux-simple-starter.svg)](https://david-dm.org/calinciupei/react-redux-simple-starter)
-[![devDependency Status](https://david-dm.org/calinciupei/react-redux-simple-starter/dev-status.svg)](https://david-dm.org/calinciupei/react-redux-simple-starter#info=devDependencies)
+[![Build Status](https://travis-ci.org/calinciupei/react-redux-material-ui-starter.svg?branch=master)](https://travis-ci.org/calinciupei/react-redux-material-ui-starter.svg)
+[![dependencies](https://david-dm.org/calinciupei/react-redux-material-ui-starter.svg)](https://david-dm.org/calinciupei/react-redux-material-ui-starter)
+[![devDependency Status](https://david-dm.org/calinciupei/react-redux-material-ui-starter/dev-status.svg)](https://david-dm.org/calinciupei/react-redux-material-ui-starter#info=devDependencies)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 Starter kit designed to get up and running with a bunch of awesome front-end technologies.
