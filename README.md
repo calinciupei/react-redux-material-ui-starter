@@ -1,6 +1,6 @@
 # React Redux Simple Starter
 
-[![Build Status](https://travis-ci.org/calinciupei/react-redux-material-ui-starter.svg?branch=master)](https://travis-ci.org/calinciupei/react-redux-material-ui-starter.svg)
+[![Build Status](https://travis-ci.org/calinciupei/react-redux-material-ui-starter.svg?branch=master)](https://travis-ci.org/calinciupei/react-redux-material-ui-starter)
 [![dependencies](https://david-dm.org/calinciupei/react-redux-material-ui-starter.svg)](https://david-dm.org/calinciupei/react-redux-material-ui-starter)
 [![devDependency Status](https://david-dm.org/calinciupei/react-redux-material-ui-starter/dev-status.svg)](https://david-dm.org/calinciupei/react-redux-material-ui-starter#info=devDependencies)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
