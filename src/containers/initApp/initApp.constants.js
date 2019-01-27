@@ -1,5 +1,3 @@
 const DEPENDENCY_DONE = '@INITAPP/DEPENDENCY_DONE';
 
-export {
-    DEPENDENCY_DONE,
-};
+export { DEPENDENCY_DONE };

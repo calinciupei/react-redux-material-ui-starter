@@ -1,8 +1,8 @@
 import React from 'react';
-import {render} from 'react-dom';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
-import {createStore, applyMiddleware} from 'redux';
-import {Provider} from 'react-redux';
+import { render } from 'react-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 
 // containers
@@ -22,41 +22,31 @@ import AboutUs from './pages/AboutUs/index';
 import './style/main.scss';
 
 const rootNode = document.getElementById('dom-r-root');
-const middleware = [
-    thunk,
-];
+const middleware = [thunk];
 
 /* eslint-disable */
 if (ENVIRONMENT === 'development') {
-    const createLogger = require('redux-logger').createLogger;
-    middleware.push(createLogger({
-        collapsed: false,
-    }));
+  const createLogger = require('redux-logger').createLogger;
+  middleware.push(
+    createLogger({
+      collapsed: false
+    })
+  );
 }
 /* eslint-disable */
 
-const store = createStore(
-    indexReducers,
-    applyMiddleware(...middleware),
-);
+const store = createStore(indexReducers, applyMiddleware(...middleware));
 
 render(
-    <Provider store={store}>
-        <InitApp>
-            <Router>
-                <MainTemplate>
-                    <Route 
-                        path="/"
-                        exact={true}
-                        component={HomePage}
-                    />
-                    <Route 
-                        path="about"
-                        component={AboutUs}
-                    />
-                </MainTemplate>
-            </Router>
-        </InitApp>
-    </Provider>,
-    rootNode
+  <Provider store={store}>
+    <InitApp>
+      <Router>
+        <MainTemplate>
+          <Route path='/' exact={true} component={HomePage} />
+          <Route path='about' component={AboutUs} />
+        </MainTemplate>
+      </Router>
+    </InitApp>
+  </Provider>,
+  rootNode
 );
