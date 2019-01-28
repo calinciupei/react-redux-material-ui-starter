@@ -10,7 +10,11 @@
     "promise"
   ],
   "env": {
-    "browser" : true
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "mocha": true,
+    "jest": true
   },
   "globals": {
     "__DEV__"      : false,
@@ -30,6 +34,12 @@
       "MemberExpression": 1,
       "ObjectExpression": 1,
       "SwitchCase": 1
-    }]
+    }],
+    "no-unused-vars": [
+      "error",
+      {
+        "varsIgnorePattern": "should|expect"
+      }
+    ]
   }
 }

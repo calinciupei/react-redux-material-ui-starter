@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Jumbotron /> should render correctly 1`] = `
+<Jumbotron
+  className={Object {}}
+  classes={
+    Object {
+      "jumbotron": "Jumbotron-jumbotron-1",
+      "mainText": "Jumbotron-mainText-3",
+      "textField": "Jumbotron-textField-2",
+    }
+  }
+/>
+`;
