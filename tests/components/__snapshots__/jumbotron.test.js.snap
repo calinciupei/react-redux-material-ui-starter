@@ -1,14 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Jumbotron /> should render correctly 1`] = `
-<Jumbotron
-  className={Object {}}
-  classes={
-    Object {
-      "jumbotron": "Jumbotron-jumbotron-1",
-      "mainText": "Jumbotron-mainText-3",
-      "textField": "Jumbotron-textField-2",
-    }
-  }
-/>
+<WithStyles(Grid)
+  alignItems="center"
+  className="Jumbotron-jumbotron-1 Jumbotron-jumbotron-1"
+  container={true}
+  direction="row"
+  justify="center"
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    Jumbotron
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
 `;

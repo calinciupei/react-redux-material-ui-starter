@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SectionOne /> should render correctly 1`] = `
+<WithStyles(Grid)
+  alignItems="center"
+  className="SectionOne-section-1"
+  container={true}
+  direction="row"
+  justify="space-between"
+>
+  <WithStyles(Grid)
+    className="SectionOne-sectionHeader-2"
+    item={true}
+    xs={12}
+  >
+    <WithStyles(Typography)
+      component="h3"
+      variant="h3"
+    >
+      <b>
+        Section One
+      </b>
+    </WithStyles(Typography)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;

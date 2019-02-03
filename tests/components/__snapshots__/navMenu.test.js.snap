@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavMenu /> should render correctly 1`] = `
+<div
+  className="navigation"
+>
+  <div
+    className="nav-menu"
+  >
+    <WithStyles(List)
+      className="NavMenu-list-1"
+    >
+      <WithStyles(ListItem)
+        className="NavMenu-listItem-2"
+      >
+        <WithStyles(Button)
+          href="/"
+        >
+          Menu 1
+        </WithStyles(Button)>
+      </WithStyles(ListItem)>
+      <WithStyles(ListItem)
+        className="NavMenu-listItem-2"
+      >
+        <WithStyles(Button)
+          href="about"
+        >
+          Menu 2
+        </WithStyles(Button)>
+      </WithStyles(ListItem)>
+      <WithStyles(ListItem)
+        className="NavMenu-listItemButton-3"
+      >
+        <WithStyles(Button)
+          className="flatPrimary"
+          color="primary"
+          variant="outlined"
+        >
+          Sign In
+        </WithStyles(Button)>
+      </WithStyles(ListItem)>
+      <WithStyles(ListItem)
+        className="NavMenu-listItemButton-3"
+      >
+        <WithStyles(Button)
+          color="primary"
+          variant="contained"
+        >
+          Sign Up
+        </WithStyles(Button)>
+      </WithStyles(ListItem)>
+    </WithStyles(List)>
+  </div>
+</div>
+`;

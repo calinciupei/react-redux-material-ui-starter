@@ -5,15 +5,17 @@ import Jumbotron from '../../src/components/jumbotron/jumbotron.component';
 
 let context;
 let props = {
-  classes: {}
+  classes: {
+    jumbotron: 'Jumbotron-jumbotron-1',
+    mainText: 'Jumbotron-mainText-3',
+    textField: 'Jumbotron-textField-2'
+  }
 };
 
-const createComponent = props => shallow(<Jumbotron className={props.classes} />);
-
 describe('<Jumbotron />', () => {
-  context = createComponent(props);
+  context = shallow(<Jumbotron {...props} />);
 
   it('should render correctly', () => {
-    expect(context).toMatchSnapshot();
+    expect(context.dive()).toMatchSnapshot();
   });
 });

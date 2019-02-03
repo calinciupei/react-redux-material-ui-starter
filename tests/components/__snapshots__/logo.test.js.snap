@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Logo /> should render correctly 1`] = `
+<div
+  className="logo"
+>
+  <span
+    className="logo__text"
+  >
+    Logo
+  </span>
+</div>
+`;

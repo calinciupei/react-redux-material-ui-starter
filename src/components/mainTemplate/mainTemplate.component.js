@@ -6,7 +6,6 @@ import { MuiThemeProvider, withStyles } from '@material-ui/core/styles';
 import HeaderBar from '../headerBar/headerBar.component';
 import FooterBar from '../footerBar/footerBar.component';
 
-import 'typeface-roboto';
 import theme from '../../style/matrial-styles/theme';
 import { container } from '../../style/matrial-styles/material.style';
 /**
@@ -15,7 +14,7 @@ import { container } from '../../style/matrial-styles/material.style';
  * High order component that will render app template with its specific sections.
  */
 
-const mainStyle = theme => ({ container });
+const mainStyle = () => ({ container });
 
 class MainTemplate extends Component {
   render () {

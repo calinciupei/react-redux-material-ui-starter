@@ -19,6 +19,7 @@ import HomePage from './pages/HomePage/index';
 import AboutUs from './pages/AboutUs/index';
 
 // styles
+import 'typeface-roboto';
 import './style/main.scss';
 
 const rootNode = document.getElementById('dom-r-root');
