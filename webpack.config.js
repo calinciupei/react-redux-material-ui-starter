@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-module.exports = options => {
+module.exports = () => {
   const NODE_ENV = process.env.NODE_ENV || 'development';
   const DIST_PATH = path.resolve(__dirname, './dist');
   const devMode = NODE_ENV !== 'production';
