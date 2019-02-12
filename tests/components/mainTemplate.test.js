@@ -1,16 +1,25 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { createMount } from '@material-ui/core/test-utils';
 
 import MainTemplate from '../../src/components/mainTemplate/mainTemplate.component';
 
-let context;
-
-const createComponent = () => shallow(<MainTemplate />);
-
 describe('<MainTemplate />', () => {
-  context = createComponent();
+  let mount, wrapper;
 
-  it('should render correctly', () => {
-    expect(context.dive()).toMatchSnapshot();
+  beforeAll(() => {
+    mount = createMount();
+  });
+
+  afterAll(() => {
+    mount.cleanUp();
+  });
+
+  it('should work correctly', () => {
+    wrapper = mount(<MainTemplate />);
+    expect(wrapper.find('HeaderBar')).toHaveLength(1);
+  });
+  it('should work correctly', () => {
+    wrapper = mount(<MainTemplate />);
+    expect(wrapper.find('FooterBar')).toHaveLength(1);
   });
 });

@@ -1,16 +1,17 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { createShallow } from '@material-ui/core/test-utils';
 
 import Logo from '../../src/components/logo/logo.component';
 
-let context;
-
-const createComponent = () => shallow(<Logo />);
-
 describe('<Logo />', () => {
-  context = createComponent();
+  let shallow, wrapper;
+
+  beforeEach(() => {
+    shallow = createShallow();
+    wrapper = shallow(<Logo />);
+  });
 
   it('should render correctly', () => {
-    expect(context).toMatchSnapshot();
+    expect(wrapper.find('div').hasClass('logo')).toBe(true);
   });
 });

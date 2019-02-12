@@ -1,14 +1,23 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { createShallow } from '@material-ui/core/test-utils';
 
 import FooterBar from '../../src/components/footerBar/footerBar.component';
 
-const createComponent = () => shallow(<FooterBar />);
-
 describe('<FooterBar />', () => {
-  const context = createComponent();
+  let shallow;
+
+  beforeAll(() => {
+    shallow = createShallow();
+  });
+
+  afterAll(() => {
+    shallow.cleanUp();
+  });
 
   it('should render correctly', () => {
-    expect(context).toMatchSnapshot();
+    const wrapper = shallow(<FooterBar />);
+
+    expect(wrapper.find('div')).toHaveLength(1);
+    expect(wrapper.find('div').text()).toBe('Footer Bar');
   });
 });

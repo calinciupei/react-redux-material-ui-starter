@@ -1,16 +1,21 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { createMount } from '@material-ui/core/test-utils';
 
 import NavMenu from '../../src/components/navMenu/navMenu.component';
 
-let context;
-
-const createComponent = () => shallow(<NavMenu />);
-
 describe('<NavMenu />', () => {
-  context = createComponent();
+  let mount, wrapper;
+
+  beforeAll(() => {
+    mount = createMount();
+  });
+
+  afterAll(() => {
+    mount.cleanUp();
+  });
 
   it('should render correctly', () => {
-    expect(context.dive()).toMatchSnapshot();
+    wrapper = mount(<NavMenu />);
+    expect(wrapper.find('.nav-menu')).toHaveLength(1);
   });
 });

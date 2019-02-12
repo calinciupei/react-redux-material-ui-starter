@@ -9,7 +9,7 @@ import SectionThree from '../../components/sectionThree/sectionThree.component';
 import SectionFour from '../../components/sectionFour/sectionFour.component';
 import SectionFive from '../../components/sectionFive/sectionFive.component';
 
-class HomePage extends Component {
+export class HomePage extends Component {
   state = {
     dependenciesLoaded: false
   };
@@ -17,8 +17,6 @@ class HomePage extends Component {
   componentWillMount () {
     this.setState({ dependenciesLoaded: true });
   }
-
-  componentWillReceiveProps () {}
 
   renderJumbotron () {
     return <Jumbotron />;

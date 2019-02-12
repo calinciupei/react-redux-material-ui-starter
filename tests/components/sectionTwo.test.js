@@ -1,16 +1,27 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { createMount } from '@material-ui/core/test-utils';
+import { Grid } from '@material-ui/core';
 
 import SectionTwo from '../../src/components/sectionTwo/sectionTwo.component';
 
-let context;
-
-const createComponent = () => shallow(<SectionTwo />);
-
 describe('<SectionTwo />', () => {
-  context = createComponent();
+  let mount;
+
+  beforeAll(() => {
+    mount = createMount();
+  });
+
+  afterAll(() => {
+    mount.cleanUp();
+  });
 
   it('should render correctly', () => {
-    expect(context.dive()).toMatchSnapshot();
+    const wrapper = mount(<SectionTwo />);
+    expect(wrapper).toHaveLength(1);
+  });
+
+  it('should render <Grid />', () => {
+    const wrapper = mount(<SectionTwo />);
+    expect(wrapper.find(Grid)).toHaveLength(2);
   });
 });

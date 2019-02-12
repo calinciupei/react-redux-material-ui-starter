@@ -11,12 +11,6 @@ class Jumbotron extends Component {
     name: 'Email'
   };
 
-  handleChange = name => event => {
-    this.setState({
-      [name]: event.target.value
-    });
-  };
-
   render () {
     const { classes } = this.props;
 

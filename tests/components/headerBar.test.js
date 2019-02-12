@@ -1,14 +1,19 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { createShallow } from '@material-ui/core/test-utils';
 
 import HeaderBar from '../../src/components/headerBar/headerBar.component';
 
-const createComponent = () => shallow(<HeaderBar />);
-
 describe('<HeaderBar />', () => {
-  const context = createComponent();
+  let shallow;
+
+  beforeAll(() => {
+    shallow = createShallow();
+  });
 
   it('should render correctly', () => {
-    expect(context).toMatchSnapshot();
+    const wrapper = shallow(<HeaderBar />);
+
+    expect(wrapper.find('div')).toHaveLength(1);
+    expect(wrapper.find('div').text()).toBe('Header Bar');
   });
 });

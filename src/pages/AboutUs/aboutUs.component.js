@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 // components
 import Button from '@material-ui/core/Button';
 
-class AboutUs extends Component {
+export class AboutUs extends Component {
   render () {
     return (
       <div>

@@ -1,21 +1,22 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { createMount } from '@material-ui/core/test-utils';
+import { Grid } from '@material-ui/core';
 
 import Jumbotron from '../../src/components/jumbotron/jumbotron.component';
 
-let context;
-let props = {
-  classes: {
-    jumbotron: 'Jumbotron-jumbotron-1',
-    mainText: 'Jumbotron-mainText-3',
-    textField: 'Jumbotron-textField-2'
-  }
-};
-
 describe('<Jumbotron />', () => {
-  context = shallow(<Jumbotron {...props} />);
+  let mount;
 
-  it('should render correctly', () => {
-    expect(context.dive()).toMatchSnapshot();
+  beforeAll(() => {
+    mount = createMount();
+  });
+
+  afterAll(() => {
+    mount.cleanUp();
+  });
+
+  it('should render <Grid />', () => {
+    const wrapper = mount(<Jumbotron />);
+    expect(wrapper.find(Grid)).toHaveLength(2);
   });
 });

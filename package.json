@@ -110,6 +110,9 @@
       "!**/style/**",
       "!webpack.config.js"
     ],
+    "globals": {
+      "window": true
+    },
     "moduleFileExtensions": [
       "js",
       "jsx"
@@ -123,7 +126,6 @@
     ],
     "setupFiles": [
       "./tests/setup.js"
-    ],
-    "testEnvironment": "node"
+    ]
   }
 }

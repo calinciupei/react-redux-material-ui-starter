@@ -8,7 +8,7 @@ const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
 describe('initApp.actions', () => {
-  it('should dispatch the correct actions when shouldGet returns true', () => {
+  it('should dispatch the correct actions when should get returns true', () => {
     const expectedActions = {
       type: constants.DEPENDENCY_DONE
     };

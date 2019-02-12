@@ -1,16 +1,27 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { createMount } from '@material-ui/core/test-utils';
+import Grid from '@material-ui/core/Grid';
 
 import SectionFour from '../../src/components/sectionFour/sectionFour.component';
 
-let context;
-
-const createComponent = () => shallow(<SectionFour />);
-
 describe('<SectionFour />', () => {
-  context = createComponent();
+  let mount;
+
+  beforeAll(() => {
+    mount = createMount();
+  });
+
+  afterAll(() => {
+    mount.cleanUp();
+  });
 
   it('should render correctly', () => {
-    expect(context.dive()).toMatchSnapshot();
+    const wrapper = mount(<SectionFour />);
+    expect(wrapper).toHaveLength(1);
+  });
+
+  it('should render <Grid />', () => {
+    const wrapper = mount(<SectionFour />);
+    expect(wrapper.find(Grid)).toHaveLength(2);
   });
 });

@@ -1,16 +1,21 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { createMount } from '@material-ui/core/test-utils';
 
-import AboutUs from '../../../src/pages/AboutUs/aboutUs.component';
-
-let context;
-
-const createComponent = () => shallow(<AboutUs />);
+import { AboutUs } from '../../../src/pages/AboutUs/aboutUs.component';
 
 describe('<AboutUs />', () => {
-  context = createComponent();
+  let mount;
 
-  it('should render correctly', () => {
-    expect(context).toMatchSnapshot();
+  beforeAll(() => {
+    mount = createMount();
+  });
+
+  afterAll(() => {
+    mount.cleanUp();
+  });
+
+  it('should render error', () => {
+    const wrapper = mount(<AboutUs />);
+    expect(wrapper.find('div div').text()).toEqual('AboutUs Component');
   });
 });

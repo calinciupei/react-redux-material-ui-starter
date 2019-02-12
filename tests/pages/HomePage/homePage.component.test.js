@@ -1,16 +1,21 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { createShallow } from '@material-ui/core/test-utils';
 
-import HomePage from '../../../src/pages/HomePage/homePage.component';
-
-let context;
-
-const createComponent = () => shallow(<HomePage />);
+import { HomePage } from '../../../src/pages/HomePage/homePage.component';
 
 describe('<HomePage />', () => {
-  context = createComponent();
+  let shallow, wrapper;
 
-  it('should render correctly', () => {
-    expect(context).toMatchSnapshot();
+  beforeAll(() => {
+    shallow = createShallow();
+    wrapper = shallow(<HomePage />);
+  });
+
+  afterAll(() => {
+    wrapper.cleanUp();
+  });
+
+  it('should render error', () => {
+    expect(wrapper.state('dependenciesLoaded')).toBe(true);
   });
 });

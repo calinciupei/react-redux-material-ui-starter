@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import { getDependencySuccess } from './initApp.actions';
 
-class InitApp extends Component {
+export class InitApp extends Component {
   state = {
     ready: false
   };
@@ -31,6 +31,6 @@ InitApp.propTypes = {
   dispatch: PropTypes.func.isRequired,
 };
 
-export default connect(state => ({
+export default connect((state) => ({
   initApp: state.initApp
 }))(InitApp);

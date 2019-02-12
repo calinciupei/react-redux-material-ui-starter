@@ -1,6 +1,6 @@
 import { container } from '../material.style';
 
-const sectionStyle = theme => ({
+const sectionStyle = () => ({
   section: {
     ...container,
     marginBottom: '150px'

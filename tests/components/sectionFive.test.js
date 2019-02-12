@@ -1,16 +1,21 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { createMount } from '@material-ui/core/test-utils';
 
 import SectionFive from '../../src/components/sectionFive/sectionFive.component';
 
-let context;
-
-const createComponent = () => shallow(<SectionFive />);
-
 describe('<SectionFive />', () => {
-  context = createComponent();
+  let mount;
+
+  beforeAll(() => {
+    mount = createMount();
+  });
+
+  afterAll(() => {
+    mount.cleanUp();
+  });
 
   it('should render correctly', () => {
-    expect(context.dive()).toMatchSnapshot();
+    const wrapper = mount(<SectionFive />);
+    expect(wrapper).toHaveLength(1);
   });
 });
